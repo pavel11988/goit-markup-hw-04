@@ -2,6 +2,7 @@
   --background-dark-gray-color: #2f303a;
   --background-gray-color: #f5f4fa;
   --text-blue-color: #2196f3;
+  --hover-svg-blue-color: #2196f3;
   --btn-hover-blue-color: #188ce8;
   --text-black-color: #212121; /* Primary text color */
   --text-gray-color: #757575;
@@ -67,8 +68,6 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-
-  /* border: 2px solid green; */
 }
 
 /* ----------------- */
@@ -153,8 +152,8 @@ img {
   letter-spacing: 0.02em;
 }
 
-.header-contacts .contacts-item + .contacts-item {
-  margin-left: 50px;
+.header-contacts .contacts-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-contacts .contacts-link {
@@ -164,7 +163,26 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  display: flex;
+  align-items: center;
 }
+
+.contacts-link.e-mail > .link-item {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.contacts-link.telephone > .link-item {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+/* .contacts-link .link-item:hover {
+  fill: var(--hover-svg-blue-color);
+} */
 
 .footer {
   padding-top: 60px;
@@ -200,7 +218,11 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
 
-  background-color: var(--background-dark-gray-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/background-hero-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   text-align: center;
 }
@@ -252,7 +274,38 @@ img {
 }
 
 .main-advantages-item {
-  max-width: 270px;
+  width: 270px;
+}
+
+.main-advantages-item::before {
+  content: '';
+  display: block;
+  height: 120px;
+
+  margin-bottom: 30px;
+
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
+
+  border-radius: 4px;
+}
+
+.main-advantages-item.antenna::before {
+  background-image: url(./images/icons/antenna.svg);
+}
+
+.main-advantages-item.clock::before {
+  background-image: url(./images/icons/clock.svg);
+}
+
+.main-advantages-item.diagram::before {
+  background-image: url(./images/icons/diagram.svg);
+}
+
+.main-advantages-item.astronaut::before {
+  background-image: url(./images/icons/astronaut.svg);
 }
 
 .main-advantages-item + .main-advantages-item {
@@ -317,6 +370,8 @@ img {
   background-color: var(--white-color);
   padding-bottom: 30px;
   display: inline-block;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -339,6 +394,8 @@ img {
 
 .personal-card .description {
   color: var(--text-gray-color);
+
+  margin-bottom: 16px;
 
   font-size: 16px;
   line-height: 1.2;
@@ -382,6 +439,9 @@ img {
 .filter-list .button:focus {
   background-color: var(--text-blue-color);
   color: var(--white-color);
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projects-list {
@@ -397,15 +457,13 @@ img {
 
   margin-right: 30px;
   margin-bottom: 30px;
-
-  padding-bottom: 20px;
 }
 
 .card-content {
   padding-top: 20px;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  padding-bottom: 20px;
+  border: 1px solid #eeeeee;
+  border-top: 0px;
 }
 
 .projects-card:nth-child(3n) {
@@ -414,6 +472,13 @@ img {
 
 .projects-card:nth-last-child(-3 + n) {
   margin-bottom: 0;
+}
+
+.projects-card:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  cursor: pointer;
 }
 
 .projects-card .title {
