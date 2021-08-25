@@ -74,6 +74,10 @@ img {
   margin: 0 auto;
 }
 
+.link {
+  color: var(--text-black-color);
+}
+
 /* ----------------- */
 
 /* Шапка и Футер*/
