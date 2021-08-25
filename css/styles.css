@@ -293,19 +293,19 @@ img {
 }
 
 .main-advantages-item.antenna::before {
-  background-image: url(./images/icons/antenna.svg);
+  background-image: url(/images/icons/antenna.svg);
 }
 
 .main-advantages-item.clock::before {
-  background-image: url(./images/icons/clock.svg);
+  background-image: url(/images/icons/clock.svg);
 }
 
 .main-advantages-item.diagram::before {
-  background-image: url(./images/icons/diagram.svg);
+  background-image: url(/images/icons/diagram.svg);
 }
 
 .main-advantages-item.astronaut::before {
-  background-image: url(./images/icons/astronaut.svg);
+  background-image: url(/images/icons/astronaut.svg);
 }
 
 .main-advantages-item + .main-advantages-item {
