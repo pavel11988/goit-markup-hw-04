@@ -358,6 +358,10 @@ img {
   text-align: center;
 }
 
+.personal-list {
+  display: flex;
+}
+
 .section.personal .section-title {
   margin-bottom: 50px;
 }
@@ -365,7 +369,7 @@ img {
 .personal-card {
   flex-basis: calc((100% - 90px) / 4);
   margin-right: 30px;
-  max-height: 368px;
+  max-height: 428px;
 
   background-color: var(--white-color);
   padding-bottom: 30px;
@@ -400,6 +404,30 @@ img {
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
+}
+
+.personal-card .social-links.list {
+  display: inline-flex;
+}
+
+.social-links-item {
+  width: 44px;
+  height: 44px;
+  outline: 1px solid red;
+}
+
+.social-links-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.istagram-item {
+  display: inline-block;
+  align-self: center;
+}
+
+.istagram-item {
+  height: 20px;
+  width: 20px;
 }
 
 /* Фильтр */
