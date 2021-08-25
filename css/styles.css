@@ -293,19 +293,19 @@ img {
 }
 
 .main-advantages-item.antenna::before {
-  background-image: url(/images/icons/antenna.svg);
+  background-image: url(../images/icons/antenna.svg);
 }
 
 .main-advantages-item.clock::before {
-  background-image: url(/images/icons/clock.svg);
+  background-image: url(../images/icons/clock.svg);
 }
 
 .main-advantages-item.diagram::before {
-  background-image: url(/images/icons/diagram.svg);
+  background-image: url(../images/icons/diagram.svg);
 }
 
 .main-advantages-item.astronaut::before {
-  background-image: url(/images/icons/astronaut.svg);
+  background-image: url(../images/icons/astronaut.svg);
 }
 
 .main-advantages-item + .main-advantages-item {
@@ -413,7 +413,14 @@ img {
 .social-links-item {
   width: 44px;
   height: 44px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
+
+  padding: 12px;
+}
+
+.social-links-item:hover {
+  background-color: var(--hover-svg-blue-color);
+  border-radius: 50%;
 }
 
 .social-links-item:not(:last-child) {
@@ -421,8 +428,7 @@ img {
 }
 
 .istagram-item {
-  display: inline-block;
-  align-self: center;
+  fill: #fff;
 }
 
 .istagram-item {
